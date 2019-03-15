@@ -1,0 +1,492 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	.header
+		&-top
+			&__navbar
+				margin-left: 0
+			&__list
+				li
+					margin-right: 1em
+					a
+						font-size: 16px
+
+	.features
+		&__items
+			justify-content: space-around
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	.header
+		&-top
+			&__social-icons
+				display: none
+						
+	.header-main
+		&__title
+			h1
+				font-size: 100px
+			p
+				font-size: 15px
+				letter-spacing: 14px
+
+	.features
+		&__items
+			justify-content: center
+		&__item
+			width: 35%
+			&:nth-child(1), &:nth-child(2)
+				margin-bottom: 50px
+			&:nth-child(1), &:nth-child(3)
+				margin-right: 25px
+			&:nth-child(2), &:nth-child(4)
+				margin-left: 25px
+		&__subtitle
+			width: 75%
+			margin: 0 auto
+
+	.information
+		&__block
+			&:nth-child(1)
+				padding: 30px 32px 30px 95px
+			&:nth-child(4)
+			 	padding: 30px 95px 30px 32px
+		&__date
+			p
+				font-size: 10px
+		&__subtitle
+			p
+				font-size: 20px
+		&__text
+			p
+				font-size: 12px
+				line-height: 18px
+
+	.blog
+		&__items
+			justify-content: space-around
+		&__item
+			width: 45%
+			&:nth-child(1), &:nth-child(2)
+				margin-bottom: 50px
+
+	.feedback
+		&__blocks
+			padding: 45px 0
+		&__text
+			display: flex
+			align-items: center
+			p
+				font-size: 13px
+
+	.key-features
+		&__subtitle
+			p
+				font-size: 20px
+		&__text
+			p
+				font-size: 12px
+				line-height: 18px
+		&__kf-one
+			width: 250px
+			p
+				font-size: 12px
+		&__kf-two
+			width: 280px
+			p
+				font-size: 12px
+		&__kf-three
+			width: 310px
+			p
+				font-size: 12px
+
+	.team
+		&__items
+			justify-content: space-around
+		&__item
+			width: 45%
+			&:nth-child(1), &:nth-child(2)
+				margin-bottom: 100px
+		&__staff
+			bottom: -7%
+
+	.form
+		&__title
+			h2
+				font-size: 31px
+		&__inputs
+			flex-direction: column
+		&__input
+			width: 100%
+			margin-bottom: 10px
+
+	.footer
+		padding: 30px 0
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	
+	.header
+		&-top
+			position: fixed
+			top: 0
+			left: 0
+			right: 0
+			z-index: 6
+			padding: 7px 15px
+			&__navbar
+				display: none
+
+	.menu
+		display: flex
+
+	.menu-link
+		display: block
+
+	.header-main
+		&__title
+			h1
+				font-size: 70px
+			p
+				font-size: 10px
+				letter-spacing: 10px
+
+	.features, .blog, .team
+		&__title
+			h2
+				font-size: 24px
+			&:before
+				font-size: 170px
+				top: -88px
+
+	.features
+		&__items
+			justify-content: center
+		&__item
+			width: 100%
+			&:nth-child(1), &:nth-child(2), &:nth-child(3)
+				margin-bottom: 50px
+			&:nth-child(1), &:nth-child(3)
+				margin-right: 0
+			&:nth-child(2), &:nth-child(4)
+				margin-left: 0
+		&__subtitle
+			width: 60%
+			margin: 0 auto
+
+	.information
+		&__blocks
+			flex-direction: column
+		&__block
+			width: 100%
+			&:nth-child(1), &:nth-child(4)
+				padding: 30px 103px
+			&:nth-child(2), &:nth-child(3)
+				display: none	
+		&__date
+			p
+				font-size: 10px
+		&__subtitle
+			p
+				font-size: 20px
+		&__text
+			p
+				font-size: 12px
+				line-height: 18px
+
+	.blog
+		&__subtitle
+			font-size: 18px
+		&__items
+			justify-content: space-around
+		&__item
+			width: 45%
+			&:nth-child(1), &:nth-child(2)
+				margin-bottom: 50px
+
+	.feedback
+		&__blocks
+			padding: 45px 0
+			flex-direction: column
+		&__block
+			width: 100%
+			margin-bottom: 30px
+			i
+				font-size: 55px
+			&:last-child
+				margin-bottom: 0
+		&__text
+			display: flex
+			align-items: center
+			p
+				font-size: 13px
+
+	.key-features
+		&__block
+			&:nth-child(1)
+				width: 80%
+			&:nth-child(2)
+				display: none
+		&__content
+			display: flex
+			flex-direction: column
+			align-items: center
+			text-align: center
+		&__kf-one, &__kf-two, &__kf-three
+			padding: 13px 19px 13px 19px
+		&__subtitle
+			p
+				font-size: 20px
+		&__text
+			p
+				font-size: 12px
+				line-height: 18px
+		&__kf-one
+			width: 250px
+			p
+				font-size: 12px
+		&__kf-two
+			width: 280px
+			p
+				font-size: 12px
+		&__kf-three
+			width: 310px
+			p
+				font-size: 12px
+
+	.team
+		&__subtitle
+			font-size: 18px
+		&__items
+			justify-content: space-around
+		&__item
+			width: 100%
+			img
+				width: 70%
+			&:nth-child(1), &:nth-child(2), &:nth-child(3)
+				margin-bottom: 100px
+		&__staff
+			width: 60%
+			bottom: -7%
+
+	.form
+		&__title
+			&:before
+				top: -91px
+			h2
+				font-size: 19px
+			&:before
+				font-size: 170px
+				top: -91px
+		&__inputs
+			flex-direction: column
+		&__input
+			width: 100%
+			margin-bottom: 10px
+
+	.footer
+		padding: 30px 0
+		&__block
+			flex-direction: column
+		&__copyrights
+			margin-bottom: 10px
+			
+
+
+	/*Disable Animation on Mobile Devices*/
+	.animated
+		/*CSS transitions*/
+		-o-transition-property: none !important
+		-moz-transition-property: none !important
+		-ms-transition-property: none !important
+		-webkit-transition-property: none !important
+		transition-property: none !important
+		/*CSS transforms*/
+		-o-transform: none !important
+		-moz-transform: none !important
+		-ms-transform: none !important
+		-webkit-transform: none !important
+		transform: none !important
+		/*CSS animations*/
+		-webkit-animation: none !important
+		-moz-animation: none !important
+		-o-animation: none !important
+		-ms-animation: none !important
+		animation: none !important
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	.header
+		&-top
+			&__navbar
+				display: none
+				margin-left: 0
+
+	.menu
+		display: flex
+		ul
+			li
+				a
+					font-size: 25px
+
+	.menu-link
+		display: block
+
+	.header-main
+		&__title
+			h1
+				font-size: 50px
+			p
+				font-size: 9px
+				letter-spacing: 6px
+		&__scroll
+			p
+				font-size: 10px
+
+	.features, .blog, .team
+		&__title
+			h2
+				font-size: 16px
+			&:before
+				font-size: 140px
+				top: -74px
+
+	.features
+		&__items
+			justify-content: center
+		&__item
+			width: 100%
+			&:nth-child(1), &:nth-child(2), &:nth-child(3)
+				margin-bottom: 50px
+			&:nth-child(1), &:nth-child(3)
+				margin-right: 0
+			&:nth-child(2), &:nth-child(4)
+				margin-left: 0
+		&__subtitle
+			width: 60%
+			margin: 0 auto
+
+	.information
+		&__blocks
+			flex-direction: column
+		&__block
+			width: 100%
+			&:nth-child(1), &:nth-child(4)
+				padding: 30px
+			&:nth-child(2), &:nth-child(3)
+				display: none	
+		&__date
+			p
+				font-size: 10px
+		&__subtitle
+			p
+				font-size: 20px
+		&__text
+			p
+				font-size: 12px
+				line-height: 18px
+
+	.blog
+		&__subtitle
+			font-size: 12px
+		&__items
+			flex-direction: column
+		&__item
+			width: 100%
+			&:nth-child(1), &:nth-child(2), &:nth-child(3)
+				margin-bottom: 50px
+
+	.feedback
+		&__blocks
+			padding: 15px 0
+			flex-direction: column
+		&__block
+			width: 100%
+			margin-bottom: 30px
+			i
+				font-size: 45px
+			&:last-child
+				margin-bottom: 0
+		&__text
+			display: flex
+			align-items: center
+			p
+				font-size: 11px
+				line-height: 18px
+
+	.key-features
+		&__block
+			&:nth-child(1)
+				width: 80%
+			&:nth-child(2)
+				display: none
+		&__content
+			display: flex
+			flex-direction: column
+			align-items: center
+			text-align: center
+		&__kf-one, &__kf-two, &__kf-three
+			padding: 13px 19px 13px 19px
+		&__subtitle
+			p
+				font-size: 20px
+		&__text
+			p
+				font-size: 12px
+				line-height: 18px
+		&__kf-one
+			width: 250px
+			p
+				font-size: 12px
+		&__kf-two
+			width: 280px
+			p
+				font-size: 12px
+		&__kf-three
+			width: 310px
+			p
+				font-size: 12px
+
+	.team
+		&__subtitle
+			font-size: 12px
+		&__items
+			justify-content: space-around
+		&__item
+			width: 100%
+			img
+				width: 70%
+			&:nth-child(1), &:nth-child(2), &:nth-child(3)
+				margin-bottom: 100px
+		&__staff
+			width: 60%
+			bottom: -12%
+
+	.form
+		&__title
+			&:before
+				top: -91px
+			h2
+				font-size: 12px
+			&:before
+				font-size: 170px
+				top: -95px
+		&__inputs
+			flex-direction: column
+		&__input
+			width: 100%
+			margin-bottom: 10px
+		&__button
+			width: 100%
+
+	.footer
+		padding: 30px 0
+		&__block
+			flex-direction: column
+		&__copyrights
+			margin-bottom: 10px
