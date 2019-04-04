@@ -1,0 +1,310 @@
+@import "vars.sass"
+@import "fonts.sass"
+
+*
+	box-sizing: border-box
+
+body
+	padding: 0
+	margin: 0
+	font-size: 13px
+	font-weight: 400
+	font-family: 'Myriad', sans-serif
+	color: $white
+	position: relative
+	overflow-x: hidden
+	box-sizing: border-box
+
+a, a:active, a:visited, a:link
+	padding: 0
+	margin: 0
+	color: $white
+	text-decoration: none
+	outline: none
+
+h1, h2, h3, h4, h5, h6, p
+	padding: 0
+	margin: 0
+
+ul, li
+	padding: 0
+	margin: 0
+	list-style-type: none
+
+img
+	width: 100%
+
+.container
+	width: 100%
+	max-width: 1170px
+	min-width: 320px
+	margin: 0 auto
+	padding: 0 15px
+
+.d-flex
+	display: flex
+
+.aic
+	align-items: center
+
+.sect-padding
+	padding: 165px 0 115px 0
+
+.sect-blue
+	background-color: $blue
+
+.sect-white
+	background-color: $white
+
+.overflow-scroll
+	overflow-y: hidden
+
+.btn-top 
+	display: block
+	position: fixed
+	bottom: 25px
+	right: 25px
+	color: $white
+	font-size: 30px
+	cursor: pointer
+	text-transform: uppercase
+	border: none
+	outline: none
+	opacity: 0
+	background-color: $blue
+	box-shadow: 0 0 4px #000
+	padding: 5px 12px
+	border-radius: 4px
+	transition: .7s
+	
+.d-active
+	opacity: 1
+
+.menu
+  display: none
+  justify-content: center
+  align-items: center
+  position: absolute
+  text-align: center
+  background-color: rgba(17, 116, 158, 0.95)
+  top: 0
+  left: 0
+  height: 100vh
+  width: 100vw
+  z-index: 10
+  overflow: hidden
+  opacity: 0
+  visibility: hidden
+  transition: all 1s ease
+
+.menu-active
+  opacity: 1
+  visibility: visible
+
+.menu ul
+  display: flex
+  flex-direction: column
+  width: 100%
+  li
+  	width: 100%
+	  transition: all .4s ease
+	  border-top: 1px solid #fff
+	  &:first-child
+	  	border-top: 1px solid transparent
+	  a
+	    display: block
+	    width: 100%
+	    color: #fff
+	    font-size: 30px
+	    font-family: 'Gotham'
+	    line-height: 70px
+	    text-transform: uppercase
+	    letter-spacing: 6px
+	    text-shadow: 0 1px 5px #222222
+	  &:hover
+	    background-color: darken($blue, 5%)
+
+.menu-link
+  display: none
+  width: 45px
+  height: 45px
+  background-color: $blue
+  box-shadow: 0 0 1px darken($blue, 20%)
+  position: relative
+  z-index: 12
+  span
+    display: block
+    width: 32px
+    height: 2px
+    background-color: #fff
+    position: absolute
+    left: 50%
+    margin-left: -16px
+    top: 50%
+    margin-top: -1px
+    &:before, &:after
+      display: block
+      width: 32px
+      height: 2px
+      background-color: #fff
+      position: absolute
+      left: 50%
+      margin-left: -16px
+      top: 50%
+      margin-top: -1px
+    &:before
+      content: ''
+      margin-top: -12px
+      transition: all 0.3s ease
+    &:after
+      content: ''
+      margin-top: 10px
+      transition: all 0.3s ease
+
+.menu-link_active span
+  background-color: transparent
+  &:before
+    transform: rotate(135deg)
+    margin-top: 0
+  &:after
+    transform: rotate(-135deg)
+    margin-top: 0
+
+.header
+	position: relative
+	height: 100vh
+	background: url("../img/images/header-bg.jpg") no-repeat top / cover
+	&-top
+		padding: 7px 45px
+		z-index: 12
+		justify-content: space-between
+		transition: all .5s ease
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+			opacity: .4
+			width: 100%
+			height: 1px
+			background-color: $white
+		&__logo
+			img
+				width: 79px
+				height: 75px
+		&__list
+			li
+				margin-right: 3em
+				a
+					font-family: 'Myriad', sans-serif
+					font-size: 16px
+					position: relative
+					padding: 37px 10px
+					text-transform: uppercase
+					&:before
+						content: ''
+						bottom: 0
+						left: 0
+						position: absolute
+						width: 100%
+						height: 3px
+						background-color: $blue
+						transition: 0.2s
+						transform: scaleX(0)
+					&:hover:before
+						transform: scaleX(1)
+				&:last-child
+					margin-right: 0
+		&__social-icons
+			ul
+				display: flex
+				li
+					margin-right: 31px
+					text-align: center
+					&:last-child
+						margin-right: 0
+					a
+						display: block
+						width: 35px
+						height: 35px
+						font-size: 16px
+						border: 1px solid transparent
+						border-radius: 50%
+						transition: all .3s ease
+						&:hover
+							color: $blue
+							border: 1px solid $white
+						i
+							line-height: 35px
+				
+	
+
+.header-main
+	&__title
+		position: absolute
+		left: 50%
+		bottom: 50%
+		transform: translate(-50%, 50%)
+		text-align: center
+		h1
+			font-family: 'Gotham', sans-serif
+			font-size: 153px
+			font-weight: 700
+			text-transform: uppercase
+		p
+			font-family: 'Gotham', sans-serif
+			font-size: 25px
+			color: $blue
+			letter-spacing: 20px
+			text-transform: uppercase
+	&__scroll
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 5%
+		display: flex
+		flex-direction: column
+		align-items: center
+		p
+			font-family: 'OpenSans', sans-serif
+			margin-bottom: 22px
+		&-down
+			display: block
+			width: 45px
+			height: 45px
+			border: 1px solid $white
+			border-radius: 50%
+			line-height: 57px
+			text-align: center
+			transition: all .3s ease
+			i
+				font-size: 25px
+				position: relative
+				animation: animate 1.4s infinite linear
+			&:hover
+				background-color: $white
+				&:hover
+					color: $blue
+
+@keyframes animate
+	0% 
+	  top: -10%
+	
+	25% 
+	  top: 10%
+	
+	40% 
+	  top: 10%
+	
+	70% 
+	  top: -10%
+	
+	100% 
+	  top: -10%
+	
