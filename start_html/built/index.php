@@ -6,10 +6,10 @@
 	<!-- Name site title -->
 	<title>Заголовок сайта</title>
 	<!-- Meta tag -->
-	<meta name="description" content="">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="">
+	<meta name="description" lang="ru" content="">
+	<meta name="keywords" lang="ru" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta property="og:image" content="path/to/image.jpg">
 	<!-- Load CSS Compiled-->
 	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="libs/normalize/normalize.css">
@@ -33,6 +33,7 @@
 	</footer>
 
 	<!-- Load Scripts Start -->
+	<script src="libs/jquery/jquery-3.3.1.min.js"></script>
 	<script src="js/main.js"></script>
 	<!-- Load Scripts End -->
 

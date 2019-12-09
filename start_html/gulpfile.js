@@ -6,14 +6,11 @@ var gulp         = require('gulp'),
 		browserSync  = require('browser-sync').create(),
 		concat       = require('gulp-concat'),
 		uglify       = require('gulp-uglify'),
-		imagemin = require('gulp-imagemin'),
 		plumber = require('gulp-plumber');
 
 gulp.task('browser-sync', ['styles', 'scripts'], function() {
 		browserSync.init({
-				server: {
-						baseDir: "./built"
-				},
+				proxy: "new-project",
 				browser: 'chrome',
 				notify: false
 		});
@@ -36,18 +33,12 @@ gulp.task('scripts', function() {
 	.pipe(gulp.dest('built/js'));
 });
 
-gulp.task('imagemin', function() {
-	gulp.src('src/assets/images/*')
-	.pipe(imagemin())
-	.pipe(gulp.dest('built/img'));
-});
-
 gulp.task('watch', function () {
 	gulp.watch('src/assets/styles/*.sass', ['styles']);
 	gulp.watch('src/assets/scripts/*.js', ['scripts']);
-	gulp.watch('src/assets/images/*', ['imagemin']);
 	gulp.watch('src/assets/scripts/*.js').on("change", browserSync.reload);
 	gulp.watch('built/*.html').on('change', browserSync.reload);
+	gulp.watch('built/**/*.php').on('change', browserSync.reload);
 });
 
-gulp.task('default', ['browser-sync', 'watch', 'imagemin']);
+gulp.task('default', ['browser-sync', 'watch']);
