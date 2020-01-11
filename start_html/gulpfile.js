@@ -6,11 +6,12 @@ var gulp         = require('gulp'),
 		browserSync  = require('browser-sync').create(),
 		concat       = require('gulp-concat'),
 		uglify       = require('gulp-uglify'),
+		babel 			 = require('gulp-babel'),
 		plumber = require('gulp-plumber');
 
 gulp.task('browser-sync', ['styles', 'scripts'], function() {
 		browserSync.init({
-				proxy: "new-project",
+				proxy: "test",
 				browser: 'chrome',
 				notify: false
 		});
@@ -29,6 +30,9 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
 	return gulp.src('src/assets/scripts/*.js')
 	.pipe(plumber())
+	.pipe(babel({
+            presets: ['@babel/env']
+        })).on('error', console.error.bind(console))
 	.pipe(uglify().on('error', console.error))
 	.pipe(gulp.dest('built/js'));
 });
