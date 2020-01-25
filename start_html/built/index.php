@@ -13,9 +13,7 @@
 	<!-- Load CSS Compiled-->
 	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="libs/normalize/normalize.css">
-	<link rel="stylesheet" href="css/fonts.min.css">
-	<link rel="stylesheet" href="css/header.min.css">
-	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
