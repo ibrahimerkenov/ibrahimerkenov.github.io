@@ -32,7 +32,7 @@
 
 	<!-- Load Scripts Start -->
 	<script src="libs/jquery/jquery-3.3.1.min.js"></script>
-	<script src="js/main.js"></script>
+	<script src="js/main.min.js"></script>
 	<!-- Load Scripts End -->
 
 </body>

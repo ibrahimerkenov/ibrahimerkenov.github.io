@@ -34,6 +34,7 @@ gulp.task('scripts', function() {
             presets: ['@babel/env']
         })).on('error', console.error.bind(console))
 	.pipe(uglify().on('error', console.error))
+	.pipe(rename({suffix: '.min', prefix : ''}))
 	.pipe(gulp.dest('built/js'));
 });
 
